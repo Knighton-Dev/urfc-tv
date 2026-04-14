@@ -1,17 +1,16 @@
-export type Provider =
-  | "MLS Season Pass"
-  | "ESPN"
-  | "ESPN+"
-  | "Peacock"
-  | "Apple TV+"
-  | "TNT"
-  | "FS1"
-  | "Local Broadcast";
+export interface StreamingService {
+  provider: string;
+  url: string;
+}
+
+export interface BroadcastChannel {
+  provider: string;
+}
 
 export interface Game {
   date: string; // YYYY-MM-DD
   opponent: string;
-  provider: Provider;
-  streamUrl: string;
   time: string;
+  streamingServices?: StreamingService[];
+  broadcast?: BroadcastChannel[];
 }
