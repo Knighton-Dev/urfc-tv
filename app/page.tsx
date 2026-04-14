@@ -18,7 +18,7 @@ export default function Home() {
       {game ? (
         <div className="flex flex-col items-center gap-8 text-center">
           <p className="text-2xl font-medium tracking-widest uppercase text-black/50">
-            Is URFC on TV today?
+            Do the Utah Royals play today?
           </p>
           <p className="text-[12rem] font-black leading-none tracking-tight">
             YES
@@ -39,7 +39,7 @@ export default function Home() {
       ) : (
         <div className="flex flex-col items-center gap-8 text-center">
           <p className="text-2xl font-medium tracking-widest uppercase text-black/50">
-            Is URFC on TV today?
+            Do the Utah Royals play today?
           </p>
           <p className="text-[12rem] font-black leading-none tracking-tight">
             NO
