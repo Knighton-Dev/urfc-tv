@@ -1,44 +1,23 @@
 [
   {
     "date": "2026-04-14",
-    "opponent": "Minnesota United FC",
-    "provider": "MLS Season Pass",
-    "streamUrl": "https://tv.apple.com/us/sports/mls",
-    "time": "7:30 PM ET"
+    "opponent": "Seattle Reign FC",
+    "provider": "Victory+",
+    "streamUrl": "https://victoryplus.com/content/nwsl",
+    "time": "6:00 PM MT"
   },
   {
-    "date": "2026-04-19",
-    "opponent": "Colorado Rapids",
-    "provider": "Peacock",
-    "streamUrl": "https://www.peacocktv.com",
-    "time": "8:00 PM ET"
+    "date": "2026-05-02",
+    "opponent": "Angel City FC",
+    "provider": "ION",
+    "streamUrl": "https://www.ionnwsl.com/",
+    "time": "6:45 PM MT"
   },
   {
-    "date": "2026-04-26",
-    "opponent": "FC Cincinnati",
-    "provider": "MLS Season Pass",
-    "streamUrl": "https://tv.apple.com/us/sports/mls",
-    "time": "7:30 PM ET"
-  },
-  {
-    "date": "2026-05-03",
-    "opponent": "St. Louis City SC",
-    "provider": "ESPN+",
-    "streamUrl": "https://plus.espn.com",
-    "time": "8:00 PM ET"
-  },
-  {
-    "date": "2026-05-10",
-    "opponent": "Atlanta United",
-    "provider": "MLS Season Pass",
-    "streamUrl": "https://tv.apple.com/us/sports/mls",
-    "time": "7:00 PM ET"
-  },
-  {
-    "date": "2026-05-17",
-    "opponent": "Charlotte FC",
-    "provider": "ESPN",
-    "streamUrl": "https://www.espn.com/watch",
-    "time": "3:30 PM ET"
+    "date": "2026-05-06",
+    "opponent": "Houston Dash",
+    "provider": "CBS Sports Network",
+    "streamUrl": "https://www.cbssports.com/soccer/nwsl/",
+    "time": "8:00 PM MT"
   }
 ]
