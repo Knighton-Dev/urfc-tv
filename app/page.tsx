@@ -2,7 +2,9 @@ import schedule from "@/data/schedule.json";
 import type { Game } from "@/types/schedule";
 
 function getTodayDateString(): string {
-  return new Date().toLocaleDateString("en-CA"); // YYYY-MM-DD in local time
+  return new Date().toLocaleDateString("en-CA", {
+    timeZone: "America/Denver",
+  }); // YYYY-MM-DD in Mountain Time
 }
 
 function getTodaysGame(): Game | null {
@@ -21,6 +23,7 @@ function getNextGame(): Game | null {
 
 function formatDate(dateStr: string): string {
   return new Date(`${dateStr}T00:00:00`).toLocaleDateString("en-US", {
+    timeZone: "America/Denver",
     weekday: "long",
     month: "long",
     day: "numeric",
