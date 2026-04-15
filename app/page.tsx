@@ -22,7 +22,7 @@ function getNextGame(): Game | null {
 }
 
 function formatDate(dateStr: string): string {
-  return new Date(`${dateStr}T00:00:00`).toLocaleDateString("en-US", {
+  return new Date(`${dateStr}T12:00:00`).toLocaleDateString("en-US", {
     timeZone: "America/Denver",
     weekday: "long",
     month: "long",
