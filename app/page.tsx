@@ -45,10 +45,20 @@ export default function Home() {
             YES
           </p>
           <div className="flex flex-col items-center gap-2">
-            <p className="text-xl font-medium">vs. {game.opponent}</p>
+            <p className="text-xl font-medium">{game.home ? "vs" : "at"} {game.opponent}</p>
             <p className="text-lg text-black/60">{game.time}</p>
           </div>
           <div className="mt-4 flex flex-col items-center gap-3">
+            {game.home && (
+              <a
+                href="https://www.rsl.com/utahroyals/tickets/single"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border-2 border-black px-8 py-3 text-lg font-semibold transition-colors hover:bg-black hover:text-white"
+              >
+                Buy Tickets
+              </a>
+            )}
             {game.streamingServices && game.streamingServices.length > 0 && (
               <>
                 {game.streamingServices.map((service) => (
@@ -99,11 +109,24 @@ export default function Home() {
           </p>
           {nextGame && (
             <p className="text-lg text-black/60">
-              Next game: {formatDate(nextGame.date)} vs. {nextGame.opponent} at {nextGame.time}
+              Next game: {formatDate(nextGame.date)} {nextGame.home ? "vs" : "at"} {nextGame.opponent} at {nextGame.time}
             </p>
           )}
         </div>
       )}
+      <div className="mt-12 mb-8 flex justify-center">
+        <a
+          href="https://www.buymeacoffee.com/probablynotian"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=probablynotian&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"
+            alt="Buy me a coffee"
+          />
+        </a>
+      </div>
     </main>
   );
 }
