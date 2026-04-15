@@ -114,19 +114,14 @@ export default function Home() {
           )}
         </div>
       )}
-      <div className="mt-12 mb-8 flex justify-center">
-        <a
-          href="https://www.buymeacoffee.com/probablynotian"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=probablynotian&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"
-            alt="Buy me a coffee"
-          />
-        </a>
-      </div>
+      <a
+        href="https://buymeacoffee.com/probablynotian"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 inline-flex items-center gap-2 rounded-full border-2 border-black px-8 py-3 text-lg font-semibold transition-colors hover:bg-black hover:text-white"
+      >
+        Buy me a coffee
+      </a>
     </main>
   );
 }
