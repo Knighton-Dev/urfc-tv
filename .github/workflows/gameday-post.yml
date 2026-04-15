@@ -1,0 +1,32 @@
+name: Gameday Bluesky Post
+
+on:
+  # 14:00 UTC = 8:00 AM MDT (UTC-6) during the April–August NWSL season.
+  # Note: during MST (UTC-7, roughly Nov–Mar) this would fire at 7:00 AM MT,
+  # but there are no home games in that period so the offset does not matter.
+  schedule:
+    - cron: "0 14 * * *"
+  # Allow manual runs from the Actions tab (useful for testing)
+  workflow_dispatch:
+
+jobs:
+  post:
+    name: Post game-day reminder to Bluesky
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run game-day post script
+        env:
+          BLUESKY_IDENTIFIER: ${{ secrets.BLUESKY_IDENTIFIER }}
+          BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+        run: node scripts/post-gameday.js
