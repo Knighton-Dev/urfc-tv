@@ -11,6 +11,7 @@ export interface Game {
   date: string; // YYYY-MM-DD
   opponent: string;
   time: string;
+  home: boolean;
   streamingServices?: StreamingService[];
   broadcast?: BroadcastChannel[];
 }
