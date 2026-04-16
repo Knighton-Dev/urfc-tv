@@ -84,5 +84,35 @@
       { "provider": "Victory+", "url": "https://victoryplus.com/content/nwsl" }
     ],
     "time": "8:00 PM MT"
+  },
+  {
+    "date": "2026-07-18",
+    "opponent": "Orlando Pride",
+    "home": true,
+    "broadcast": [
+      { "provider": "ION" }
+    ],
+    "time": "6:45 PM MT"
+  },
+  {
+    "date": "2026-07-25",
+    "opponent": "North Carolina Courage",
+    "home": false,
+    "broadcast": [
+      { "provider": "ION" }
+    ],
+    "time": "5:45 PM MT"
+  },
+  {
+    "date": "2026-07-29",
+    "opponent": "Washington Spirit",
+    "home": true,
+    "streamingServices": [
+      { "provider": "NWSL+", "url": "https://www.nwslsoccer.com/plus" }
+    ],
+    "broadcast": [
+      { "provider": "KMYU" }
+    ],
+    "time": "7:00 PM MT"
   }
 ]
