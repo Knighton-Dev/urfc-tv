@@ -46,3 +46,5 @@ node scripts/post-gameday.js
 ```
 
 The script exits silently (code 0) if there is no game today.
+
+*this is just a subtle test addition*
