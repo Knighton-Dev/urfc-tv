@@ -1,6 +1,8 @@
 import schedule from "@/data/schedule.json";
 import type { Game } from "@/types/schedule";
 
+export const dynamic = "force-dynamic";
+
 function getTodayDateString(): string {
   return new Date().toLocaleDateString("en-CA", {
     timeZone: "America/Denver",
