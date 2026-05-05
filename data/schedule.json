@@ -55,6 +55,9 @@
     "broadcast": [
       { "provider": "ION" }
     ],
+    "streamingServices": [
+      { "provider": "ION (PlutoTv)", "url": "https://pluto.tv/live-tv/ion" }
+    ],
     "time": "4:30 PM MT"
   },
   {
@@ -63,6 +66,9 @@
     "home": false,
     "broadcast": [
       { "provider": "ION" }
+    ],
+     "streamingServices": [
+      { "provider": "ION (PlutoTv)", "url": "https://pluto.tv/live-tv/ion" }
     ],
     "time": "2:00 PM MT"
   },
@@ -92,6 +98,9 @@
     "broadcast": [
       { "provider": "ION" }
     ],
+     "streamingServices": [
+      { "provider": "ION (PlutoTv)", "url": "https://pluto.tv/live-tv/ion" }
+    ],
     "time": "6:45 PM MT"
   },
   {
@@ -100,6 +109,9 @@
     "home": false,
     "broadcast": [
       { "provider": "ION" }
+    ],
+     "streamingServices": [
+      { "provider": "ION (PlutoTv)", "url": "https://pluto.tv/live-tv/ion" }
     ],
     "time": "5:45 PM MT"
   },
@@ -114,5 +126,59 @@
       { "provider": "KMYU" }
     ],
     "time": "7:00 PM MT"
+  },
+  {
+    "date": "2026-08-02",
+    "opponent": "Portland Thorns",
+    "home": true,
+    "streamingServices": [
+      { "provider": "Victory+", "url": "https://victoryplus.com/content/nwsl" }
+    ],
+    "time": "5:00 PM MT"
+  },
+  {
+    "date": "2026-08-08",
+    "opponent": "Denver Summit FC",
+    "home": false,
+    "broadcast": [
+      { "provider": "ION" }
+    ],
+     "streamingServices": [
+      { "provider": "ION (PlutoTv)", "url": "https://pluto.tv/live-tv/ion" }
+    ],
+    "time": "2:00 PM MT"
+  },
+  {
+    "date": "2026-08-14",
+    "opponent": "Bay FC",
+    "home": true,
+    "streamingServices": [
+      { "provider": "Victory+", "url": "https://victoryplus.com/content/nwsl" }
+    ],
+    "time": "8:00 PM MT"
+  },
+  {
+    "date": "2026-08-21",
+    "opponent": "San Diego Wave",
+    "home": false,
+    "streamingServices": [
+      { "provider": "NWSL+", "url": "https://www.nwslsoccer.com/plus" }
+    ],
+    "broadcast": [
+      { "provider": "KMYU" }
+    ],
+    "time": "8:00 PM MT"
+  },
+  {
+    "date": "2026-08-29",
+    "opponent": "Orlando Pride",
+    "home": false,
+    "broadcast": [
+      { "provider": "KMYU" }
+    ],
+     "streamingServices": [
+      { "provider": "NWSL+", "url": "https://www.nwslsoccer.com/plus" }
+    ],
+    "time": "5:00 PM MT"
   }
 ]
