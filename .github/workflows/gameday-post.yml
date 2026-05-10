@@ -1,4 +1,4 @@
-name: Gameday Bluesky Post
+name: Gameday Social Post
 
 on:
   # 14:00 UTC = 8:00 AM MDT (UTC-6) during the April–August NWSL season.
@@ -11,7 +11,7 @@ on:
 
 jobs:
   post:
-    name: Post game-day reminder to Bluesky
+    name: Post game-day reminder to social channels
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -29,4 +29,6 @@ jobs:
         env:
           BLUESKY_IDENTIFIER: ${{ secrets.BLUESKY_IDENTIFIER }}
           BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+          FACEBOOK_GROUP_ID: ${{ secrets.FACEBOOK_GROUP_ID }}
+          FACEBOOK_ACCESS_TOKEN: ${{ secrets.FACEBOOK_ACCESS_TOKEN }}
         run: node scripts/post-gameday.js
