@@ -143,6 +143,7 @@ const postText = buildPostText(game);
 console.log("Composing post:\n---\n" + postText + "\n---");
 
 let didPost = false;
+let hadFailure = false;
 
 try {
   const { accessJwt, did } = await createSession(identifier, password);
@@ -151,6 +152,7 @@ try {
   didPost = true;
 } catch (err) {
   console.error("Failed to post to Bluesky:", err.message);
+  hadFailure = true;
 }
 
 const facebookGroupId = process.env.FACEBOOK_GROUP_ID;
@@ -167,6 +169,7 @@ if (facebookGroupId && facebookAccessToken) {
     didPost = true;
   } catch (err) {
     console.error("Failed to post to Facebook Group:", err.message);
+    hadFailure = true;
   }
 } else {
   console.log(
@@ -177,4 +180,8 @@ if (facebookGroupId && facebookAccessToken) {
 if (!didPost) {
   console.error("No social posts were published successfully.");
   process.exit(1);
+}
+
+if (hadFailure) {
+  console.warn("Posted to at least one platform, but another platform failed.");
 }
