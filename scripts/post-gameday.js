@@ -1,17 +1,22 @@
 #!/usr/bin/env node
-// Post a Bluesky game-day reminder for Utah Royals FC.
+// Post game-day reminders for Utah Royals FC.
 // Reads data/schedule.json, finds a game scheduled for today (MT), and posts
 // if one is found. Exits silently (code 0) when there is no game today.
 //
 // Required environment variables:
 //   BLUESKY_IDENTIFIER   – your Bluesky handle, e.g. utahroyals.bsky.social
 //   BLUESKY_APP_PASSWORD – an App Password from Settings → App Passwords
+//
+// Optional environment variables (for Facebook Group posting):
+//   FACEBOOK_GROUP_ID    – the numeric Facebook Group ID
+//   FACEBOOK_ACCESS_TOKEN – a long-lived user access token with group posting permissions
 
 import { readFileSync } from "fs";
 import { fileURLToPath } from "url";
 import { join, dirname } from "path";
 
 const BSKY_API = "https://bsky.social/xrpc";
+const FACEBOOK_GRAPH_API = "https://graph.facebook.com/v22.0";
 
 // ── helpers ──────────────────────────────────────────────────────────────────
 
@@ -90,6 +95,26 @@ async function createPost(accessJwt, did, text) {
   return res.json();
 }
 
+async function createFacebookGroupPost(groupId, accessToken, text) {
+  const body = new URLSearchParams({
+    message: text,
+    access_token: accessToken,
+  });
+
+  const res = await fetch(`${FACEBOOK_GRAPH_API}/${groupId}/feed`, {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body,
+  });
+
+  if (!res.ok) {
+    const responseBody = await res.text();
+    throw new Error(`Facebook post failed (${res.status}): ${responseBody}`);
+  }
+
+  return res.json();
+}
+
 // ── main ─────────────────────────────────────────────────────────────────────
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -117,11 +142,46 @@ if (!identifier || !password) {
 const postText = buildPostText(game);
 console.log("Composing post:\n---\n" + postText + "\n---");
 
+let didPost = false;
+let hadFailure = false;
+
 try {
   const { accessJwt, did } = await createSession(identifier, password);
   const result = await createPost(accessJwt, did, postText);
-  console.log("Posted successfully:", result.uri);
+  console.log("Posted to Bluesky successfully:", result.uri);
+  didPost = true;
 } catch (err) {
   console.error("Failed to post to Bluesky:", err.message);
+  hadFailure = true;
+}
+
+const facebookGroupId = process.env.FACEBOOK_GROUP_ID;
+const facebookAccessToken = process.env.FACEBOOK_ACCESS_TOKEN;
+
+if (facebookGroupId && facebookAccessToken) {
+  try {
+    const result = await createFacebookGroupPost(
+      facebookGroupId,
+      facebookAccessToken,
+      postText
+    );
+    console.log("Posted to Facebook Group successfully:", result.id);
+    didPost = true;
+  } catch (err) {
+    console.error("Failed to post to Facebook Group:", err.message);
+    hadFailure = true;
+  }
+} else {
+  console.log(
+    "Facebook Group posting skipped (set FACEBOOK_GROUP_ID and FACEBOOK_ACCESS_TOKEN to enable)."
+  );
+}
+
+if (!didPost) {
+  console.error("No social posts were published successfully.");
   process.exit(1);
+}
+
+if (hadFailure) {
+  console.warn("Posted to at least one platform, but another platform failed.");
 }
