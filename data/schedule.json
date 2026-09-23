@@ -1,5 +1,56 @@
 [
   {
+    "date": "2026-03-14",
+    "opponent": "Kansas City Current",
+    "home": false,
+    "broadcast": [
+      { "provider": "ION" }
+    ],
+    "streamingServices": [
+      { "provider": "ION (PlutoTv)", "url": "https://pluto.tv/live-tv/ion" }
+    ],
+    "time": "2:00 PM MT"
+  },
+  {
+    "date": "2026-03-22",
+    "opponent": "San Diego Wave",
+    "home": true,
+    "streamingServices": [
+      { "provider": "Victory+", "url": "https://victoryplus.com/content/nwsl" }
+    ],
+    "time": "5:00 PM MT"
+  },
+  {
+    "date": "2026-03-25",
+    "opponent": "Washington Spirit",
+    "home": false,
+    "streamingServices": [
+      { "provider": "Victory+", "url": "https://victoryplus.com/content/nwsl" }
+    ],
+    "broadcast": [
+      { "provider": "KMYU" }
+    ],
+    "time": "5:00 PM MT"
+  },
+  {
+    "date": "2026-03-28",
+    "opponent": "Boston Legacy FC",
+    "home": false,
+    "broadcast": [
+      { "provider": "ESPN2" }
+    ],
+    "time": "10:00 AM MT"
+  },
+  {
+    "date": "2026-04-03",
+    "opponent": "Chicago Stars FC",
+    "home": true,
+    "streamingServices": [
+      { "provider": "NWSL+", "url": "https://www.nwslsoccer.com/plus" }
+    ],
+    "time": "7:00 PM MT"
+  },
+  {
     "date": "2026-04-26",
     "opponent": "Seattle Reign FC",
     "home": false,
@@ -74,7 +125,7 @@
   },
   {
     "date": "2026-07-05",
-    "opponent": "Chicago Red Stars",
+    "opponent": "Chicago Stars FC",
     "home": false,
     "broadcast": [
       { "provider": "CBS Sports Network" },
@@ -85,7 +136,7 @@
   {
     "date": "2026-07-10",
     "opponent": "Gotham FC",
-    "home": false,
+    "home": true,
     "streamingServices": [
       { "provider": "Victory+", "url": "https://victoryplus.com/content/nwsl" }
     ],
@@ -140,20 +191,20 @@
     "date": "2026-08-08",
     "opponent": "Denver Summit FC",
     "home": false,
-    "broadcast": [
-      { "provider": "ION" }
+    "streamingServices": [
+      { "provider": "NWSL+", "url": "https://www.nwslsoccer.com/plus" }
     ],
-     "streamingServices": [
-      { "provider": "ION (PlutoTv)", "url": "https://pluto.tv/live-tv/ion" }
-    ],
-    "time": "2:00 PM MT"
+    "time": "8:00 PM MT"
   },
   {
     "date": "2026-08-14",
     "opponent": "Bay FC",
     "home": true,
     "streamingServices": [
-      { "provider": "Victory+", "url": "https://victoryplus.com/content/nwsl" }
+      { "provider": "NWSL+", "url": "https://www.nwslsoccer.com/plus" }
+    ],
+    "broadcast": [
+      { "provider": "KMYU" }
     ],
     "time": "8:00 PM MT"
   },
@@ -162,10 +213,7 @@
     "opponent": "San Diego Wave",
     "home": false,
     "streamingServices": [
-      { "provider": "NWSL+", "url": "https://www.nwslsoccer.com/plus" }
-    ],
-    "broadcast": [
-      { "provider": "KMYU" }
+      { "provider": "Prime Video", "url": "https://www.amazon.com/gp/video/tournament/amzn1.dv.icid.059cc906-0518-4ac1-b425-c9eabbbdcfdb" }
     ],
     "time": "8:00 PM MT"
   },
@@ -176,9 +224,99 @@
     "broadcast": [
       { "provider": "KMYU" }
     ],
-     "streamingServices": [
+    "streamingServices": [
       { "provider": "NWSL+", "url": "https://www.nwslsoccer.com/plus" }
     ],
     "time": "5:00 PM MT"
+  },
+  {
+    "date": "2026-09-04",
+    "opponent": "Boston Legacy FC",
+    "home": true,
+    "streamingServices": [
+      { "provider": "NWSL+", "url": "https://www.nwslsoccer.com/plus" }
+    ],
+    "broadcast": [
+      { "provider": "KMYU" }
+    ],
+    "time": "7:30 PM MT"
+  },
+  {
+    "date": "2026-09-12",
+    "opponent": "Houston Dash",
+    "home": false,
+    "broadcast": [
+      { "provider": "ION" }
+    ],
+    "streamingServices": [
+      { "provider": "ION (PlutoTv)", "url": "https://pluto.tv/live-tv/ion" }
+    ],
+    "time": "6:45 PM MT"
+  },
+  {
+    "date": "2026-09-20",
+    "opponent": "Angel City FC",
+    "home": true,
+    "streamingServices": [
+      { "provider": "NWSL+", "url": "https://www.nwslsoccer.com/plus" }
+    ],
+    "broadcast": [
+      { "provider": "KMYU" }
+    ],
+    "time": "5:00 PM MT"
+  },
+  {
+    "date": "2026-09-27",
+    "opponent": "North Carolina Courage",
+    "home": true,
+    "broadcast": [
+      { "provider": "ROKU" }
+    ],
+    "time": "5:00 PM MT"
+  },
+  {
+    "date": "2026-10-03",
+    "opponent": "Racing Louisville",
+    "home": false,
+    "broadcast": [
+      { "provider": "ION" }
+    ],
+    "streamingServices": [
+      { "provider": "ION (PlutoTv)", "url": "https://pluto.tv/live-tv/ion" }
+    ],
+    "time": "2:00 PM MT"
+  },
+  {
+    "date": "2026-10-17",
+    "opponent": "Kansas City Current",
+    "home": true,
+    "broadcast": [
+      { "provider": "ION" }
+    ],
+    "streamingServices": [
+      { "provider": "ION (PlutoTv)", "url": "https://pluto.tv/live-tv/ion" }
+    ],
+    "time": "4:30 PM MT"
+  },
+  {
+    "date": "2026-10-23",
+    "opponent": "Seattle Reign FC",
+    "home": true,
+    "streamingServices": [
+      { "provider": "NWSL+", "url": "https://www.nwslsoccer.com/plus" }
+    ],
+    "broadcast": [
+      { "provider": "KMYU" }
+    ],
+    "time": "7:30 PM MT"
+  },
+  {
+    "date": "2026-11-01",
+    "opponent": "Gotham FC",
+    "home": false,
+    "broadcast": [
+      { "provider": "ESPN (TBD)" }
+    ],
+    "time": "3:00 PM MT"
   }
 ]
