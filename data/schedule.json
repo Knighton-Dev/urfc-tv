@@ -318,5 +318,14 @@
       { "provider": "ESPN (TBD)" }
     ],
     "time": "3:00 PM MT"
+  },
+  {
+    "date": "2026-11-06",
+    "opponent": "San Diego Wave",
+    "home": false,
+    "streamingServices": [
+      { "provider": "Prime Video", "url": "https://www.amazon.com/gp/video/tournament/amzn1.dv.icid.059cc906-0518-4ac1-b425-c9eabbbdcfdb" }
+    ],
+    "time": "8:00 PM MT"
   }
 ]
